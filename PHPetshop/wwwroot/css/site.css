@@ -1,0 +1,43 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0px;
+}
+main{
+    margin-top: 45px;
+    width: 100%;
+}
+.container{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+.page{
+    background-color: white;
+}
+a {
+    color: purple;
+}
+a:hover {
+    color: #C000D6;
+}
+p {
+    margin: 5px 0px;
+}
+textarea {
+    resize: none;
+}
+input[type=checkbox] {
+    accent-color: purple;
+}

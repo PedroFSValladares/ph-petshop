@@ -1,0 +1,33 @@
+.banner{
+    margin-top: 0px;
+}
+h1{
+    display: flex;
+    font-size: 56px;
+    justify-content: center;
+    margin-top: 60px;
+    color: purple;
+    border-bottom: 1px solid purple;
+    height: 100px;
+}
+.card{
+    height: 266px;
+    padding: 0px;
+    width: 1400px;
+    margin: 5px auto;
+    flex-direction: row;
+}
+.card figure{
+    margin: 0px;
+    align-content: center;
+}
+.card img{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 400px;
+}
+.inverso img{
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}

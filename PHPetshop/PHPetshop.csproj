@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\cadastrar.cshtml" />
+    <Content Remove="Views\fale_conosco.cshtml" />
+    <Content Remove="Views\pets.cshtml" />
+    <Content Remove="Views\produtos.cshtml" />
+    <Content Remove="Views\servicos.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Pets\Cadastrar.cshtml" />
+    <None Include="Views\fale_conosco.cshtml" />
+  </ItemGroup>
+
+</Project>

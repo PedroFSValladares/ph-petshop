@@ -1,0 +1,9 @@
+.border-rounded{
+    border-radius: 10px;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}

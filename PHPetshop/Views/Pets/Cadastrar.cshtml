@@ -1,0 +1,80 @@
+<div>            
+    <form action="" name="frmCadastro" method="post">
+        <div class="form-title">
+            <h1>Cadastrar Novo Pet</h1>
+        </div>
+        <div class="form-content">
+            <section class="areaE">
+                <div>
+                    <img class="imagem"></img>
+                    <button>Selecionar imagem</button>
+                </div>
+            </section>
+            <section class="areaD">
+                <div class="form-control">
+                    <label for="nome">Nome <br>
+                        <input type="text" id="nome" name="nome">
+                    </label>
+                </div>
+                <div class="form-control nascimento">
+                    <div>
+                        <label for="nascimento">Data de Nascimento:</label><br>
+                        <input type="date" id="nascimento" name="nascimento">
+                    </div>
+                    <div>
+                        <label for="idade">Idade:</label><br>
+                        <input type="number" id="idade" name="idade">
+                    </div>
+                </div>
+                <div class="form-control radio">
+                    <label for="sexo">Sexo:
+                        <label for="M"><input type="radio" name="sexo" id="M" value="M" checked>Macho</label>
+                        <label for="F"><input type="radio" name="sexo" id="F" value="F">Fêmea</label>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="tipo">Tipo:
+                        <select name="tipo" id="tipo">
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="ave">Ave</option>
+                        </select>
+                    </label>
+                    <label for="raca">Raça:
+                        <input type="text" name="raca" id="raca">
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="altura">Altura:
+                        <input type="number" id="altura" name="altura">
+                    </label>
+                    <label for="peso">Peso:
+                        <input type="number" id="peso" name="peso">
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="porte">Porte:
+                        <select name="porte" id="porte" disabled="disabled">
+                            <option value=""></option>
+                            <option value="mini">Mini</option>
+                            <option value="p">Pequeno</option>
+                            <option value="m">Médio</option>
+                            <option value="g">Grande</option>
+                            <option value="xg">Extra Grande</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label for="comentarios">Observações:</label>
+                </div>
+                <div class="form-control">
+                        <textarea name="comentarios" id="comentarios" cols="100" rows="10"></textarea>
+                </div>
+            </section>
+        </div>
+        <section class="form-buttons">
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </section>
+    </form>
+</div>

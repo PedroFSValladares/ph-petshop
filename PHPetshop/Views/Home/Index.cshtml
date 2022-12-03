@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<section class="sobre justify-content-between"> <!--image size: alt-375 larg-560-->
+    <div class="text">
+        <h1 class="">PH Petshop</h1>
+        <p>A mais de 20 anos acolhendo e encontrando lares para milhares de pets!</p>
+        <div class="buttons">
+            <a asp-controller="Pets" asp-action="Index" class="button">Adote um Pet</a>
+            <a asp-controller="Servicos" asp-action="Index" class="button">Conheça nossos produtos</a>
+        </div>
+    </div>
+    <div class="sobre-image">
+        <figure>
+            <img src="/images/img-pagina-inicial.png" alt="">
+        </figure>
+    </div>
+</section>
+<div class="page">
+    <section>
+        <div class="banner">
+            <div class="banner-title">
+                <h2>Pets</h2>
+            </div>
+            <div class="banner-content">
+                <div class="card">
+                    <figure>
+                        <img src="images/img-card-cachoroo.png" alt="" class="card-img-top">
+                    </figure>
+                     <div class="card-name">
+                        <h3>Cachorros</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/img-card-gato.png" alt="">
+                    </figure>
+                     <div class="card-name">
+                        <h3>Gatos</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/img-card-passaro.png" alt="">
+                    </figure>
+                     <div class="card-name">
+                        <h3>Aves</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="banner">
+            <div class="banner-title">
+                <h2>Produtos</h2>
+            </div>
+            <div class="banner-content">
+                <div class="card">
+                    <figure>
+                        <img src="images/img-card-racoes.png" alt="">
+                    </figure>
+                    <div class="card-name">
+                        <h3>Rações</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/img-card-produto.png" alt="">
+                    </figure>
+                    <div class="card-name">
+                        <h3>Higiene</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/img-card-brinquedo.png" alt="">
+                    </figure>
+                    <div class="card-name">
+                        <h3>Brinquedos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

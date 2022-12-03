@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PHPetshop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link rel="stylesheet" href="~/css/sobre.css" />
+    <link rel="stylesheet" href="~/css/banner.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid justify-content-start">
+                <a href="/" class="navbar-brand">PH PetShop</a>
+                <ul>
+                    <li>       
+                        <a asp-controller="Pets" class="nav-link">Pets</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Servicos" class="nav-link">Serviços</a>  
+                    </li>
+                    <li>
+                        <a asp-controller="Produtos" class="nav-link">Produtos</a>                        
+                    </li>
+                    <li>       
+                        <a href="pages/fale_conosco.html" class="nav-link">Fale Cosnosco</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            PH PetShop&copy Criado por <a href="https://github.com/PedroFSValladares" target="_blank">Pedro Valladares</a>
+        </div>
+    </footer>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

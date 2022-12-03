@@ -1,0 +1,74 @@
+.container-filtros{
+    position: fixed;
+}
+.container{
+    flex-direction: row;
+}
+.filtros{
+    display: flex;
+    height: 100%;
+    border-right: 1px solid black;
+    width: 300px;
+    padding-left: 5px;
+    background-color: whitesmoke;
+}
+.filtros form{
+    width: 300px;
+}
+.filtros h2{
+    font-size: 26px;
+}
+.filtros section{
+    display: flex;
+    flex-direction: column;
+}
+.filtros button{
+    margin: auto;
+    margin-top: 10px;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.options label{
+    font-size: 18px;
+}
+.principal{
+    margin: 10px 0px;
+    font-size: 22px;
+}
+.area-loja{
+    margin-top: 70px;
+}
+.area-loja .loja-row{
+    display: flex
+}
+.area-loja .card{
+    width: auto;
+    height: auto;
+}
+.area-loja .card:hover{
+    animation-name: none;
+}
+.area-loja .card img{
+    width: 195px;
+}
+.area-loja .card-content{
+    padding-left: 0px;
+}
+.card-content button{
+    display: flex;
+    margin: auto;
+    width: 250px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: purple;
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}

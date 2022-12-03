@@ -1,0 +1,30 @@
+.navbar{
+    background-color: purple;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding: 0;
+    z-index: 1;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 5px;
+    margin: 2px;
+    align-items: end;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    text-align: end;
+}
+nav .nav-link{
+    color: white;
+    padding: 5px 8px;
+}
+nav .nav-link:hover {
+    color: lightgrey;
+}
+.navbar-brand:hover {
+    color: lightgrey;
+}

@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    background-color: purple;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+    z-index: 2;
+}
+.footer-content{
+    display: flex;
+}
+footer a{
+    margin: 0px 5px;
+    color: rgb(255, 57, 255);
+    align-items: center;
+}
