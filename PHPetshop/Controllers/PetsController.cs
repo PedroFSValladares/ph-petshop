@@ -5,5 +5,10 @@ namespace PHPetshop.Controllers {
         public IActionResult Index() {
             return View();
         }
+
+        public IActionResult Cadastrar() {
+            return View();
+        }
+
     }
 }

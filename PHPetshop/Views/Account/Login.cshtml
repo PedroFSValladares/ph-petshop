@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    ViewData["Style"] = new[] { "/css/formLogin.css" };
+
+}
+
+<form class="card m-auto p-2 mt-5 mb-3 login">
+    <div class="mb-3">
+        <label class="form-label" for="txtLogin">Login:</label>
+        <input type="email" class="form-control" id="txtLogin" required/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="txtSenha">Senha:</label>
+        <input type="password" class="form-control" required/>
+    </div>
+    <div class="mb-1">
+        <a href="#">Esqueceu sua senha?</a>
+    </div>
+    <div class="mb-3">
+        <a href="#">Criar uma conta</a>
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Login"/>
+    </div>
+</form>

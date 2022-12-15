@@ -8,20 +8,7 @@
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/navbar.css" />
         <link rel="stylesheet" href="~/css/footer.css" />
-    @if(ViewData["Style"] != null) {
-        foreach(string pathToStyle in (string[])ViewData["Style"]) {
-            <link rel="stylesheet" href="@pathToStyle" />
-        }
-    }
-    <!--
-        <link rel="stylesheet" href="~/css/sobre.css" />
-        <link rel="stylesheet" href="~/css/banner.css" />
-        <link rel="stylesheet" href="~/css/formCadastro.css" />
-        
-        <link rel="stylesheet" href="~/css/loja.css" />
-    
-        <link rel="stylesheet" href="~/css/servicos.css" />
-        -->
+        <link rel="stylesheet" href="~/css/formLogin.css" />
     </head>
     <body>
         <header>
@@ -54,9 +41,9 @@
                 </div>
             </nav>
         </header>
-        <div class="container"> <!--footer absolute-->
+        <div class="container">
             <main role="main" class="">
-                @RenderBody()
+            @RenderBody()
             </main>
         </div>
         <footer>
@@ -67,6 +54,6 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>

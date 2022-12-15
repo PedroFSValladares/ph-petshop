@@ -1,13 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using PHPetshop.Models;
+using PHPetshop.Services;
 using System.Diagnostics;
 
-namespace PHPetshop.Controllers {
+namespace PHPetshop.Controllers
+{
     public class HomeController : Controller {
         private readonly ILogger<HomeController> _logger;
+        private readonly IDbService _context;
 
-        public HomeController(ILogger<HomeController> logger) {
+        public HomeController(ILogger<HomeController> logger, IDbService context) {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index() {

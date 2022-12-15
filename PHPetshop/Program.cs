@@ -1,7 +1,13 @@
+using PHPetshop.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IDbService, DbService>(options => new DbService(
+    builder.Configuration.GetConnectionString("Connection")));
+/*
+*/
 
 var app = builder.Build();
 

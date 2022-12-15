@@ -1,80 +1,112 @@
-<div>            
-    <form action="" name="frmCadastro" method="post">
-        <div class="form-title">
-            <h1>Cadastrar Novo Pet</h1>
-        </div>
-        <div class="form-content">
-            <section class="areaE">
-                <div>
-                    <img class="imagem"></img>
-                    <button>Selecionar imagem</button>
-                </div>
-            </section>
-            <section class="areaD">
-                <div class="form-control">
-                    <label for="nome">Nome <br>
-                        <input type="text" id="nome" name="nome">
-                    </label>
-                </div>
-                <div class="form-control nascimento">
-                    <div>
-                        <label for="nascimento">Data de Nascimento:</label><br>
-                        <input type="date" id="nascimento" name="nascimento">
+@model PHPetshop.Models.Pet
+
+@{
+    ViewData["Title"] = "Cadstrar novo Pet";
+    ViewData["Style"] = new[] { @"/css/formCadastro.css" };
+}
+
+<form action="" name="frmCadastro" method="post">
+    <div class="mt-5 pt-4 d-flex justify-content-center">
+        <h1 class="m-auto form-title">Cadastrar Novo Pet</h1>
+    </div>
+    <div class="m-3 row">
+        <div class="col-3">
+            <section>
+                <div class="m-2 row">
+                    <div class="col d-flex">
+                        <img src="~/images/cam.png" id="petImage" class="m-auto" width="300px"/>
                     </div>
-                    <div>
-                        <label for="idade">Idade:</label><br>
-                        <input type="number" id="idade" name="idade">
+                    <div class="col d-flex">
+                        <input
+                            type="file"
+                            accept="image/*"
+                            class="btn btn-primary m-auto w-auto"
+                            id="btnSubmitImage"/>
                     </div>
-                </div>
-                <div class="form-control radio">
-                    <label for="sexo">Sexo:
-                        <label for="M"><input type="radio" name="sexo" id="M" value="M" checked>Macho</label>
-                        <label for="F"><input type="radio" name="sexo" id="F" value="F">Fêmea</label>
-                    </label>
-                </div>
-                <div class="form-control">
-                    <label for="tipo">Tipo:
-                        <select name="tipo" id="tipo">
-                            <option value="cachorro">Cachorro</option>
-                            <option value="gato">Gato</option>
-                            <option value="ave">Ave</option>
-                        </select>
-                    </label>
-                    <label for="raca">Raça:
-                        <input type="text" name="raca" id="raca">
-                    </label>
-                </div>
-                <div class="form-control">
-                    <label for="altura">Altura:
-                        <input type="number" id="altura" name="altura">
-                    </label>
-                    <label for="peso">Peso:
-                        <input type="number" id="peso" name="peso">
-                    </label>
-                </div>
-                <div class="form-control">
-                    <label for="porte">Porte:
-                        <select name="porte" id="porte" disabled="disabled">
-                            <option value=""></option>
-                            <option value="mini">Mini</option>
-                            <option value="p">Pequeno</option>
-                            <option value="m">Médio</option>
-                            <option value="g">Grande</option>
-                            <option value="xg">Extra Grande</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="form-control">
-                    <label for="comentarios">Observações:</label>
-                </div>
-                <div class="form-control">
-                        <textarea name="comentarios" id="comentarios" cols="100" rows="10"></textarea>
                 </div>
             </section>
         </div>
-        <section class="form-buttons">
-            <input type="reset" value="Limpar">
-            <input type="submit" value="Enviar">
-        </section>
-    </form>
-</div>
+        <div class="col">
+            <section>
+                <div class="mb-2">
+                    <label asp="nome" class="form-label">Nome:</label><br>
+                    <input type="text" asp-for="Nome" id="nome" class="form-control">
+                </div>
+                <div class="mb-2">                
+                    <label for="dataResgate" class="form-label">Data do Resgate:</label>
+                    <input type="date" asp-for="DataResgate" id="dataResgate" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label for="idade" class="form-label">Idade:</label>
+                    <input type="number" asp-for="Idade" id="idade" class="form-control">
+                </div>
+                <div class="mb-2 ms-1 row">
+                    <div class="col">
+                        <div class="row">
+                            <label for="sexo" class="col-2 col-form-label">Sexo:</label>
+                            <div class="col">
+                                <div class="form-check">
+                                    <label for="M" class="form-check-label">Macho</label>
+                                    <input type="radio" asp-for="Sexo" id="M" value="M" class="form-check-input" checked>
+                                </div>
+                                <div class="form-check">
+                                    <label for="F" class="form-check-label">Fêmea</label>
+                                    <input type="radio" asp-for="Sexo" id="F" value="F" class="form-check-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <label for="porte" class="col-2 col-form-label">Porte:</label>
+                            <div class="col mt-1">
+                                <select asp-for="Porte" id="porte" class="form-select">
+                                    <option value=""></option>
+                                    <option value="0">Mini</option>
+                                    <option value="1">Pequeno</option>
+                                    <option value="2">Médio</option>
+                                    <option value="3">Grande</option>
+                                    <option value="4">Extra Grande</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="row">
+                                <label for="tipo" class="form-label">Tipo:</label>
+                                <select asp-for="Tipo" id="tipo" class="form-select">
+                                    <option value="0">Cachorro</option>
+                                    <option value="1">Gato</option>
+                                    <option value="2">Ave</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label for="raca" class="form-label">Raça:</label>
+                                <input type="text" asp-for="Raca" id="raca" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col me-2">
+                        <div class="row">
+                            <label for="altura" class="form-label">Altura:</label>
+                            <input type="number" id="altura" asp-for="Altura" class="form-control">
+                        </div>
+                        <div class="row">
+                            <label for="peso" class="form-label">Peso:</label>
+                            <input type="number" id="peso" asp-for="Peso" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="descricao" class="form-label">Descrição:</label>
+                    <textarea asp-for="Descricao" id="descricao" rows="5" class="form-control"></textarea>
+                </div>
+            </section>
+            <section class="form-buttons">
+                *Campo Obrigatório
+                <input type="submit" value="Enviar" class="btn btn-primary">
+                <input type="reset" value="Limpar" class="btn btn-outline-secondary">
+            </section>
+        </div>
+    </div>
+</form>
+<script src="~/js/FormValidation.js"></script>

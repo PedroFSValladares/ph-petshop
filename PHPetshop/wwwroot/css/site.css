@@ -38,6 +38,19 @@ p {
 textarea {
     resize: none;
 }
-input[type=checkbox] {
-    accent-color: purple;
+input[type=checkbox]:checked {
+    background-color: purple;
+}
+input[type=radio]:checked {
+    background-color: purple;
+}
+.btn-primary{
+    background-color: purple;
+}
+.btn-primary:hover {
+    background-color: #5E005E;
+}
+.card{
+    max-width: 560px;
+    max-height: 600px;
 }
