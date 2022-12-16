@@ -11,7 +11,6 @@ nav ul{
     list-style: none;
     padding: 5px;
     margin: 2px;
-    align-items: end;
 }
 nav a{
     color: white;
@@ -22,9 +21,12 @@ nav .nav-link{
     color: white;
     padding: 5px 8px;
 }
-nav .nav-link:hover {
+nav .nav-link:hover, .button-login:hover {
     color: lightgrey;
 }
 .navbar-brand:hover {
     color: lightgrey;
+}
+.button-login{
+    
 }

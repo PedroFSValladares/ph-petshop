@@ -26,7 +26,8 @@
     <body>
         <header>
             <nav class="navbar">
-                <div class="container-fluid justify-content-start">
+                <div class="container-fluid ">
+
                     <a href="/" class="navbar-brand">PH PetShop</a>
                     <ul>
                         <li class="nav-item">       
@@ -45,12 +46,13 @@
                         <li class="nav-item">       
                             <a asp-controller="Pets" asp-action="Cadastrar" class="nav-link">Cadastrar</a>
                         </li>
-
                         -->
-                        <li class="nav-item">
-                            <a asp-controller="Account" asp-action="Login" class="nav-link">Login</a>
-                        </li>
+
                     </ul>
+                    <div class="d-flex">
+                        <a asp-controller="Account" asp-action="Login" class="button-login">Login</a>
+                    </div>
+                        
                 </div>
             </nav>
         </header>
