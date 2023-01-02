@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PHPetshop.Models;
-using PHPetshop.Services;
+using PHPetshop.Services.Persistence;
 using System.Diagnostics;
 
 namespace PHPetshop.Controllers

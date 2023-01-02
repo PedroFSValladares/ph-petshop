@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\Persistence\BaseRepository.cs\**" />
+    <Content Remove="Services\Persistence\BaseRepository.cs\**" />
+    <EmbeddedResource Remove="Services\Persistence\BaseRepository.cs\**" />
+    <None Remove="Services\Persistence\BaseRepository.cs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\cadastrar.cshtml" />
     <Content Remove="Views\fale_conosco.cshtml" />
     <Content Remove="Views\pets.cshtml" />

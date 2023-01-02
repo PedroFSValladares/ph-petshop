@@ -3,19 +3,11 @@
     display: flex;
     align-items:center;
 }
-body {
-    background-image: url("../images/background-login-image.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.login {
+form {
     width:600px;
     border-radius: 10px;
     box-shadow: 1px 1px 40px
 }
-header{
-    display: none;
-}
-footer{
-    display: none;
+.criar{
+    width:1100px;
 }

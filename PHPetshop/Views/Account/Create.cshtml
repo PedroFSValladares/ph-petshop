@@ -1,0 +1,67 @@
+﻿@model PHPetshop.Models.Usuario
+
+@{
+    ViewData["Title"] = "Criar uma conta";
+    ViewData["Style"] = new[] { "/css/background.css", "/css/formNovoUsuario.css" };
+}
+<form class="card m-auto p-2" method="post">
+    <div class="mb-3">
+        <label class="form-label">Nome:</label>
+        <input asp-for="Nome" type="text" class="form-control" required/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">E-mail:</label>
+        <input asp-for="Email" type="email" class="form-control" required/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Telefone:</label>
+        <input asp-for="Telefone" type="text" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CEP:</label>
+        <input asp-for="Endereco.Cep" type="text" class="form-control" required/>
+    </div>
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-8">
+                <label class="form-label">Cidade:</label>
+                <input asp-for="Endereco.Cidade" type="text" class="form-control" required/>
+            </div>
+            <div class="col">
+                <label class="form-label">UF:</label>
+                <input asp-for="Endereco.UF" type="text" class="form-control" required/>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="row">
+            <div class="col">
+                <label class="form-label">Logradouro:</label>
+                <input asp-for="Endereco.Logradouro" type="text" class="form-control" required/>
+            </div>
+            <div class="col">
+                <label class="form-label">Número:</label>
+                <input asp-for="Endereco.Numero" type="text" class="form-control" required/>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Bairro:</label>
+        <input asp-for="Endereco.Logradouro" type="text" class="form-control" required/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Complemento:</label>
+        <input asp-for="Endereco.Complemento" type="text" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Senha:</label>
+        <input asp-for="Senha" type="password" class="form-control" required/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Confirme a senha:</label>
+        <input type="password" class="form-control" required/>
+    </div>
+    <div class="mb-3 d-flex justify-content-center">
+        <input type="submit" class="btn btn-primary w-50" value="Criar conta"/>
+    </div>
+</form>

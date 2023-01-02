@@ -1,15 +1,16 @@
-﻿@{
+﻿@model PHPetshop.Models.Usuario
+@{
     ViewData["Title"] = "Login";
-    ViewData["Style"] = new[] { "/css/formLogin.css" };
+    ViewData["Style"] = new[] { "/css/background.css", "/css/formLogin.css" };
 }      
-<form class="card m-auto p-2 mt-5 mb-3 login">
+<form class="card m-auto p-2 mt-5 mb-3" method="post">
     <div class="mb-3">
         <label class="form-label" for="txtLogin">Login:</label>
-        <input type="email" class="form-control" id="txtLogin" required/>
+        <input asp-for="Email" type="email" class="form-control" id="txtLogin" required/>
     </div>
     <div class="mb-3">
         <label class="form-label" for="txtSenha">Senha:</label>
-        <input type="password" class="form-control" required/>
+        <input asp-for="Senha" type="password" class="form-control" required/>
     </div>
     <div class="mb-1">
         <a asp-action="PasswordRecovery">Esqueceu sua senha?</a>
