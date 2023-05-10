@@ -1,55 +1,15 @@
-:root{
-    --animation-duration: 600ms;
-}
-@keyframes card-transition{
-    0% {background-color: white;}
-    50%{background-color: purple;}
-    100%{background-color: white;}
-}
-@keyframes card-transition-h3{
-    0% {color: purple;}
-    50% {color: white;}
-    100%{color: purple;}
-}
 .banner{
-    display: flex;
-    background-color: white;
-    width: 100%;
-    margin: 100px auto;
-    flex-direction: column;
-    margin-bottom: 50px;
-    background-color: white;
-}
-.card{
-    margin: 0px 10px;
-    border-radius: 7px;
-    height: 600px;
-    cursor: pointer;
-}
-.card h3 {
-    font-size: 35px;
-    color: purple;
-}
-.card-name{
-    display: flex;
-    height: 225px;
-    align-items: center;
-    justify-content: center;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-}
-.card img {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    display: grid;
 }
 .banner-content{
-    display: flex;
-    flex-direction: row;
     margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 3rem;
+
 }
 .banner-title{
     margin-top: 50px;
-    flex-direction: row;
 }
 .banner h2{
     text-align: center;
@@ -60,36 +20,6 @@
     height: 100px;
     border-bottom: 1px solid purple;
     color: purple;
-}
-.card-animation {
-    animation-name: card-transition;
-    animation-duration: var(--animation-duration);
-}
-.card-title-animation {
-    animation-name: card-transition-h3;
-    animation-duration: var(--animation-duration);
-}
-.change-title-color {
-    animation-name: card-transition-h3;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
-}
-.change-title-color-reverse {
-    animation-name: card-transition-h3;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-}
-.card-transition-reverse {
-    animation-name: card-transition;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-}
-.card-transition {
-    animation-name: card-transition;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
 }
 ::-webkit-scrollbar {
     width: 7px;

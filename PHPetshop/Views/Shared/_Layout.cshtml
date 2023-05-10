@@ -4,15 +4,17 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@ViewData["Title"] - PHPetshop</title>
+        <link rel="stylesheet" href="~/css/normalize.css" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/navbar.css" />
         <link rel="stylesheet" href="~/css/footer.css" />
-    @if(ViewData["Style"] != null) {
-        foreach(string pathToStyle in (string[])ViewData["Style"]) {
-            <link rel="stylesheet" href="@pathToStyle" />
+        @if(ViewData["Style"] != null) {
+            foreach(string pathToStyle in (string[])ViewData["Style"]) {
+                <link rel="stylesheet" href="@pathToStyle" />
+            }
         }
-    }
+        <script src="~/components/card.js" defer></script>
     <!--
         <link rel="stylesheet" href="~/css/sobre.css" />
         <link rel="stylesheet" href="~/css/banner.css" />

@@ -12,11 +12,17 @@
     <Content Remove="Views\pets.cshtml" />
     <Content Remove="Views\produtos.cshtml" />
     <Content Remove="Views\servicos.cshtml" />
+    <Content Remove="wwwroot\components\card.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\components\card.js" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Views\Pets\Cadastrar.cshtml" />
     <None Include="Views\fale_conosco.cshtml" />
+    <None Include="wwwroot\components\card.js" />
   </ItemGroup>
 
   <ItemGroup>
