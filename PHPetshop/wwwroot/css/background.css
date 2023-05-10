@@ -1,0 +1,13 @@
+﻿body {
+    background-image: url("../images/background-login-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: none;
+}
+
+footer {
+    display: none;
+}
