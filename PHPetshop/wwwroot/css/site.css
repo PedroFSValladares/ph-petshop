@@ -1,6 +1,17 @@
+:root {
+    --main-color: #B440CF;
+}
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
+}
+@font-face{
+    font-family: "Cormonant Garamond";
+    src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "Dancing Script";
+    src: url('../fonts/DancingScript-Medium.ttf') format('truetype');
 }
 @media (min-width: 768px) {
   html {
@@ -25,6 +36,7 @@ main{
 }
 .page{
     background-color: white;
+    display: grid;
 }
 a {
     color: purple;

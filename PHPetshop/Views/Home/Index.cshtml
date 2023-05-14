@@ -1,22 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    ViewData["Style"] = new[] { "/css/banners.css", "/css/bannerApresentacao.css" };
+    //ViewData["Style"] = new[] { "/css/banners.css", "/css/bannerApresentacao.css" };
+    ViewData["Style"] = "Home";
 }
-<section class="sobre justify-content-between"> <!--image size: alt-375 larg-560-->
-    <div class="text">
-        <h1>PH Petshop</h1>
-        <p>A mais de 20 anos acolhendo e encontrando lares para milhares de pets!</p>
+<div class="page-start-image"></div>
+<div class="page-start-text-container">
+    <div class="page-start-text">
+        <h1>PH PETSHOP</h1>
+        <p>A mais de 20 anos acolhendo e encontrando<br />lares para milhares de pets!</p>
         <div class="buttons">
             <a asp-controller="Pets" asp-action="Index" class="button">Adote um Pet</a>
             <a asp-controller="Produtos" asp-action="Index" class="button">Conheça nossos produtos</a>
         </div>
     </div>
-    <div class="sobre-image">
-        <figure>
-            <img src="/images/img-pagina-inicial.png" class="card-img-top" alt="">
-        </figure>
-    </div>
-</section>
+</div>
 <div class="page">
     <section>
         <div class="banner">
@@ -57,7 +54,6 @@
                     image="images/img-card-brinquedo.png"
                     title="Brinquedos"
                 ></card-anuncio>
-              
             </div>
         </div>
     </section>

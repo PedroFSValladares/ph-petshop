@@ -9,17 +9,22 @@
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/navbar.css" />
         <link rel="stylesheet" href="~/css/footer.css" />
-    @if(ViewData["Style"] != null) {
-        foreach(string pathToStyle in (string[])ViewData["Style"]) {
-            <link rel="stylesheet" href="@pathToStyle" />
-        }
-    }
+        @Html.Raw(StyleLoader.RenderStyleSection((string)ViewData["style"]))
+        <script src="~/components/card.js" defer></script>
+    <!--
+        <link rel="stylesheet" href="~/css/sobre.css" />
+        <link rel="stylesheet" href="~/css/banner.css" />
+        <link rel="stylesheet" href="~/css/formCadastro.css" />
+        
+        <link rel="stylesheet" href="~/css/loja.css" />
+    
+        <link rel="stylesheet" href="~/css/servicos.css" />
+        -->
     </head>
     <body>
         <header>
             <nav class="navbar">
-                <div class="container-fluid ">
-
+                <div class="nav-buttons">
                     <a href="/" class="navbar-brand">PH PetShop</a>
                     <ul>
                         <li class="nav-item">       
@@ -32,14 +37,13 @@
                             <a asp-controller="Produtos" asp-action="Index" class="nav-link">Produtos</a>                        
                         </li>
                         <li class="nav-item">       
-                            <a href="pages/fale_conosco.html" class="nav-link">Fale Cosnosco</a>
+                            <a asp-controller="Home" asp-action="Fale_Conosco" class="nav-link">Fale Cosnosco</a>
                         </li>
                         <!--
                         <li class="nav-item">       
                             <a asp-controller="Pets" asp-action="Cadastrar" class="nav-link">Cadastrar</a>
                         </li>
                         -->
-
                     </ul>
                     <div class="d-flex">
                         @{

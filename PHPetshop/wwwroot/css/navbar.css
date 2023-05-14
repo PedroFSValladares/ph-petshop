@@ -3,41 +3,33 @@
     position: fixed;
     width: 100%;
     top: 0px;
-    padding: 0;
+    padding: 0 1rem;
     z-index: 1;
 }
 nav ul{
     display: flex;
     list-style: none;
-    padding: 5px;
-    margin: 2px;
+    padding: .2rem;
+    margin: 0;
 }
 nav a{
     color: white;
     text-decoration: none;
-    text-align: end;
+    padding: 1rem 0;
+}
+.nav-buttons{
+    display: flex;
+}
+.navbar-brand {
+    font-size: 24px;
 }
 nav .nav-link{
     color: white;
-    padding: 5px 8px;
+    
 }
 nav .nav-link:hover, .button-login:hover {
     color: lightgrey;
 }
 .navbar-brand:hover {
     color: lightgrey;
-}
-.dropdown-menu {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-}
-.dropdown-menu a{
-    
-}
-.dropdown-menu[data-bs-popper] {
-    margin-top: 0px;
-    left: 89%;
-}
-.button-login{
-    
 }

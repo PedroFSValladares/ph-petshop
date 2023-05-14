@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <None Include="Views\Pets\Cadastrar.cshtml" />
-    <None Include="Views\fale_conosco.cshtml" />
+    <None Include="Views\Home\fale_conosco.cshtml" />
     <None Include="wwwroot\components\card.js" />
   </ItemGroup>
 

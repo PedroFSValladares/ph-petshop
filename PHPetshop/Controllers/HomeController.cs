@@ -22,7 +22,8 @@ namespace PHPetshop.Controllers
             return View();
         }
 
-        public IActionResult Forbidden() {
+        public IActionResult Fale_Conosco()
+        {
             return View();
         }
 

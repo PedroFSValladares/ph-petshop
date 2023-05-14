@@ -1,13 +1,10 @@
-﻿import { default as form } from "./FormValidation.js"
-
-form()
-var bannerTop = $(".sobre")
+﻿var bannerTop = $(".sobre")
 var min = 300
 var max = 800
 var cards = Array.from(document.getElementsByClassName("card"))
 
 function normalize(value) { return 1 - (value - min) / (max - min)} 
-
+/*
 $(document).scroll((e) => { //330 a 1200
     bannerTop.css({ "opacity": normalize($(this).scrollTop()) })
     if ($(this).scrollTop() >= 800) {

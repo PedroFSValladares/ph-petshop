@@ -43,7 +43,7 @@ class Card extends HTMLElement {
             img{
                 border-top-left-radius: .5rem;
                 border-top-right-radius: .5rem;
-                width: 450px;
+                width: 100%;
             }
         `;
 
