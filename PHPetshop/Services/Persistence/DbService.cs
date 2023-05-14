@@ -1,24 +1,15 @@
 ﻿using Microsoft.Data.SqlClient;
+using PHPetshop.Services.Persistence.Repositories;
 
 namespace PHPetshop.Services.Persistence
 {
-    public class DbService : IDbService
+    public class DbService
     {
-        private SqlConnection connection;
+        public SqlConnection Connection { get; }
         public UsuarioRepository Usuarios { get; }
-        public DbService(string connectionString){
-            connection = new SqlConnection(connectionString);
-            Usuarios = new UsuarioRepository(connection);
-            try
-            {
-                connection.Open();  //testando conexão com o banco.
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            
+        public DbService(SqlConnection connection, UsuarioRepository usuarioRepository){
+            Connection = connection;
+            Usuarios = usuarioRepository;
         }
     }
 }

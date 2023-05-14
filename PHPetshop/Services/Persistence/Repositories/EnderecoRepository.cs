@@ -3,8 +3,10 @@ using System.Data;
 using PHPetshop.Models;
 using System.Text;
 
-namespace PHPetshop.Services.Persistence {
-    public class EnderecoRepository : Repository{
+namespace PHPetshop.Services.Persistence.Repositories
+{
+    public class EnderecoRepository : Repository
+    {
         private SqlParameter Login { get; } = new SqlParameter("@login_usuario", SqlDbType.VarChar);
         private SqlParameter Logradouro { get; } = new SqlParameter("@logradouro", SqlDbType.VarChar);
         private SqlParameter Numero { get; set; } = new SqlParameter("@numero", SqlDbType.VarChar);
@@ -13,17 +15,20 @@ namespace PHPetshop.Services.Persistence {
         private SqlParameter UF { get; } = new SqlParameter("@uf", SqlDbType.VarChar);
         private SqlParameter Cep { get; } = new SqlParameter("@cep", SqlDbType.VarChar);
 
-        public EnderecoRepository(SqlConnection conn) : base(conn){
-            
+        public EnderecoRepository(SqlConnection conn) : base(conn)
+        {
+
         }
-    
-        public void Insert(string userLogin, Endereco endereco) {
+
+        public void Insert(string userLogin, Endereco endereco)
+        {
             CommandBuilder = new StringBuilder(
                 "INSERT INTO Enderecos(login_usuario,logradouro,numero,cep,cidade,uf)" +
                 "VALUES(@login_usuario,@logradouro,@numero,@cep,@cidade,@uf);");
             SqlCommand command = new SqlCommand();
-            
-            if(endereco.Complemento != null) {
+
+            if (endereco.Complemento != null)
+            {
                 CommandBuilder.Insert(CommandBuilder.ToString().IndexOf("numero,"), "complemento,");
                 CommandBuilder.Insert(CommandBuilder.ToString().IndexOf("@numero,"), "@complemento,");
                 Complemento.Value = endereco.Complemento;
@@ -46,7 +51,8 @@ namespace PHPetshop.Services.Persistence {
             ExecuteNonQuery(command);
         }
 
-        public Endereco ObterPorEmail(string email) {
+        public Endereco ObterPorEmail(string email)
+        {
             return new Endereco();
         }
     }

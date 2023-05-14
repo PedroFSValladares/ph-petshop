@@ -27,6 +27,7 @@ INSERT INTO Usuarios(email_login, senha, telefone, nome, cargo) VALUES ('teste3@
 INSERT INTO Enderecos(login_usuario, logradouro, numero, complemento, cep, cidade, uf) VALUES ('teste3@emailteste.com', 'quadra 2', 4, 'Rua dos Pinheiros', '12345-67', 'Cidade dos Deuses', 'OL');
 
 SELECT * FROM Usuarios, Enderecos WHERE Usuarios.email_login LIKE Enderecos.login_usuario;
+SELECT * FROM Usuarios, Enderecos WHERE Usuarios.email_login LIKE Enderecos.login_usuario AND Usuarios.email_login LIKE 'aderlane@email.com';
 SELECT * FROM Usuarios;
 SELECT * FROM Enderecos;
 DELETE Enderecos;

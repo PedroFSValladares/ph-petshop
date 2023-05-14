@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PHPetshop.Models;
 using PHPetshop.Services.Persistence;
@@ -8,18 +8,21 @@ namespace PHPetshop.Controllers
 {
     public class HomeController : Controller {
         private readonly ILogger<HomeController> _logger;
-        private readonly IDbService _context;
+        private readonly DbService _context;
 
-        public HomeController(ILogger<HomeController> logger, IDbService context) {
+        public HomeController(ILogger<HomeController> logger, DbService context) {
             _logger = logger;
             _context = context;
         }
-
         public IActionResult Index() {
             return View();
         }
 
         public IActionResult Privacy() {
+            return View();
+        }
+
+        public IActionResult Forbidden() {
             return View();
         }
 

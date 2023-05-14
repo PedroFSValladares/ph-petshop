@@ -9,21 +9,11 @@
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/navbar.css" />
         <link rel="stylesheet" href="~/css/footer.css" />
-        @if(ViewData["Style"] != null) {
-            foreach(string pathToStyle in (string[])ViewData["Style"]) {
-                <link rel="stylesheet" href="@pathToStyle" />
-            }
+    @if(ViewData["Style"] != null) {
+        foreach(string pathToStyle in (string[])ViewData["Style"]) {
+            <link rel="stylesheet" href="@pathToStyle" />
         }
-        <script src="~/components/card.js" defer></script>
-    <!--
-        <link rel="stylesheet" href="~/css/sobre.css" />
-        <link rel="stylesheet" href="~/css/banner.css" />
-        <link rel="stylesheet" href="~/css/formCadastro.css" />
-        
-        <link rel="stylesheet" href="~/css/loja.css" />
-    
-        <link rel="stylesheet" href="~/css/servicos.css" />
-        -->
+    }
     </head>
     <body>
         <header>
@@ -52,13 +42,25 @@
 
                     </ul>
                     <div class="d-flex">
+                        @{
+                        var userClaim = @User.Claims.Where(x => x.Type.Contains("name")).FirstOrDefault();
+                        }
+                    @if(userClaim == null) {
                         <a asp-controller="Account" asp-action="Login" class="button-login">Login</a>
-                    </div>
-                        
+                    }else{
+                        <a class="nav-link dropdown-toggle" role="button" id="UserOptionsDropdown" data-bs-toggle="dropdown">@userClaim.Value</a>
+                        <ul class="dropdown-menu" aria-labelledby="UserOptionsDropdown">
+                            <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Meu Carrinho</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a asp-controller="Account" asp-action="Logout" class="dropdown-item">Sair</a></li>
+                        </ul>
+                    }
+                    </div>  
                 </div>
             </nav>
         </header>
-        <div class="container"> <!--footer absolute-->
+        <div class="container">
             <main role="main" class="">
                 @RenderBody()
             </main>
@@ -68,6 +70,7 @@
                 PH PetShop&copy Criado por <a href="https://github.com/PedroFSValladares" target="_blank">Pedro Valladares</a>
             </div>
         </footer>
+        <script src="~/js/FormValidation.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>

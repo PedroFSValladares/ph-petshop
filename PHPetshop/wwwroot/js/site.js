@@ -1,4 +1,7 @@
-﻿var bannerTop = $(".sobre")
+﻿import { default as form } from "./FormValidation.js"
+
+form()
+var bannerTop = $(".sobre")
 var min = 300
 var max = 800
 var cards = Array.from(document.getElementsByClassName("card"))
@@ -14,6 +17,7 @@ $(document).scroll((e) => { //330 a 1200
     }
 })
 
+/*
 cards.forEach((element) => {
     $(element).on({
         "mouseenter": function (e) {
@@ -23,6 +27,7 @@ cards.forEach((element) => {
             $(element.getElementsByTagName("h3")).removeClass("change-title-color-reverse")
             $(element.getElementsByTagName("h3")).addClass("change-title-color")
             */
+/*
             $(element.getElementsByTagName("h3")).addClass("card-title-animation")
             $(element).addClass("card-animation")
             setTimeout(() => {
@@ -37,6 +42,7 @@ cards.forEach((element) => {
             $(element.getElementsByTagName("h3")).removeClass("change-title-color")
             $(element.getElementsByTagName("h3")).addClass("change-title-color-reverse")
             */
+/*
             $(element).css("animation-play-state", "running")
             $(element.getElementsByTagName("h3")).css("animation-play-state", "running")
         }
@@ -46,3 +52,4 @@ cards.forEach((element) => {
         $(element.getElementsByTagName("h3")).removeClass("card-title-animation")
     })
 })
+*/

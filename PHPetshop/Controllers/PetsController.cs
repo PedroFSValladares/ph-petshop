@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PHPetshop.Controllers {
     public class PetsController : Controller {
@@ -6,6 +7,7 @@ namespace PHPetshop.Controllers {
             return View();
         }
 
+        [Authorize("admin")]
         public IActionResult Cadastrar() {
             return View();
         }

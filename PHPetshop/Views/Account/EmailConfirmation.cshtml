@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Confirmação de Email";
+    EmailConfirmationInfo info = (EmailConfirmationInfo)ViewData["EmailConfirmationInfo"];
+}
+<div class="card m-auto p-2 mt-5 mb-3">
+    @if(info.EmailConfirmed) {
+        <div class="alert alert-success">Email confirmado com sucesso!</div>
+    } else{
+        <div class="alert alert-primary">Um email com um link para confirmar seu endereço de email foi enviado para @info.UserEmail.</div>
+    }
+</div>
