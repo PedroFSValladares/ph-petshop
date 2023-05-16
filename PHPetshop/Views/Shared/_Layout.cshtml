@@ -11,18 +11,9 @@
         <link rel="stylesheet" href="~/css/footer.css" />
         @Html.Raw(StyleLoader.RenderStyleSection((string)ViewData["style"]))
         <script src="~/components/card.js" defer></script>
-    <!--
-        <link rel="stylesheet" href="~/css/sobre.css" />
-        <link rel="stylesheet" href="~/css/banner.css" />
-        <link rel="stylesheet" href="~/css/formCadastro.css" />
-        
-        <link rel="stylesheet" href="~/css/loja.css" />
-    
-        <link rel="stylesheet" href="~/css/servicos.css" />
-        -->
     </head>
     <body>
-        <header>
+        <!--
             <nav class="navbar">
                 <div class="nav-buttons">
                     <a href="/" class="navbar-brand">PH PetShop</a>
@@ -39,13 +30,15 @@
                         <li class="nav-item">       
                             <a asp-controller="Home" asp-action="Fale_Conosco" class="nav-link">Fale Cosnosco</a>
                         </li>
-                        <!--
+                        
                         <li class="nav-item">       
                             <a asp-controller="Pets" asp-action="Cadastrar" class="nav-link">Cadastrar</a>
                         </li>
-                        -->
+                        
                     </ul>
                     <div class="d-flex">
+                        @*
+
                         @{
                         var userClaim = @User.Claims.Where(x => x.Type.Contains("name")).FirstOrDefault();
                         }
@@ -60,9 +53,13 @@
                             <li><a asp-controller="Account" asp-action="Logout" class="dropdown-item">Sair</a></li>
                         </ul>
                     }
+                        *@
                     </div>  
                 </div>
             </nav>
+
+        -->
+        <header>
         </header>
         <div class="container">
             <main role="main" class="">

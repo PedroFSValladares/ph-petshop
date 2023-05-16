@@ -1,52 +1,87 @@
 .page-start-image {
     background-image: url("../../images/background-login-image.jpg");
     background-size: cover;
+    background-position-x: center;
     filter: blur(5px);
     display: flex;
     width: 100%;
-    height: 100vh;
-    padding-top: 5rem;
+    height: 40vh;
 }
 .page-start-text-container{
     position: absolute;
     display: flex;
     width: 100%;
-    height: 100vh;
-    top: 1rem;
+    top: 5rem;
     left: 0;
 }
 .page-start-text {
     margin: auto;
+    height: 30vh;
     color: #000000;
-    padding: 2rem;
+    padding: .2rem;
     background-color: antiquewhite;
     opacity: .8;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 .page-start-text h1 {
     font-family: 'Cormorant Garamond';
-    font-size: 92px;
+    font-size: 40px;
     text-align: center;
+    padding-top: 1rem;
 }
 .page-start-text p {
-    padding: 3rem;
+    padding: 1rem;
+    padding-bottom: 1rem;
     padding-top: 0;
-    font-size: 28px;
-    color: darkgray;
+    font-size: 16px;
+    color: #3B3735;
     text-align: center;
 }
 .page-start-text .buttons {
     display: flex;
     margin: auto;
-    justify-content: start;
+    justify-content: center;
+    padding-top: 1rem;
 }
 .page-start-text a {
     text-decoration: none;
-    border: 2px solid black;
+    border: 1px solid black;
     color: black;
-    font-size: 20px;
+    font-size: 12px;
     border-radius: 30px;
-    padding: .5rem 3rem;
+    padding: .3rem 1.2rem;
     margin: auto;
     cursor: pointer;
+}
+
+@media(min-width: 780px){
+    .page-start-image {
+        height: 100vh;
+    }
+    .page-start-text-container {
+        height: 100vh;
+        top: 0;
+    }
+    .page-start-text {
+        margin: auto;
+        padding: 1rem 4rem;
+        height: auto;
+    }
+    .page-start-text h1 {
+        padding-top: 0;
+        font-size: 92px;
+    }
+    .page-start-text p {
+        padding: 1rem;
+        padding-top: 0;
+        font-size: 24px;
+    }
+    .page-start-text .buttons {
+        padding-bottom: 1rem;
+    }
+    .page-start-text a {
+        border: 2px solid black;
+        font-size: 20px;
+        padding: .3rem 2rem;
+    }
 }
